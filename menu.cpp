@@ -24,6 +24,18 @@ void dMenu() {
     cout << "Masukan angka :";
 }
 
+void perbaikanData(int p) {
+    system("cls");
+    fflush(stdin);
+    cout << "Masukkan nama: ";
+    getline(cin, sikc[p].nama);
+    cout << "Masukkan alamat: ";
+    getline(cin, sikc[p].alamat);
+    cout << "Masukkan ipk: ";
+    cin >> sikc[p].ipk;
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+}
+
 int main()
 {
   int pl;
@@ -62,7 +74,16 @@ int main()
 
                 break;
             case '3':
-                
+                system("cls");
+                int index;
+                cout << "Masukkan nomor data yang ingin diperbaiki: ";
+                cin >> index;
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                if (index >= 1 && index <= pos + 1) {
+                    perbaikanData(index - 1); // Indeks dimulai dari 1, jadi kita kurangi 1
+                } else {
+                    cout << "Nomor tidak valid!\n";
+                }
                 break;
             case '4':
                 
