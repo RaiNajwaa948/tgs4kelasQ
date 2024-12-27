@@ -33,7 +33,18 @@ int main()
         pl = getch();
         switch (pl) {
             case '1':
-                
+                pos++;
+                system("cls");
+                fflush(stdin);
+                cout << "masukan nim: ";
+                getline(cin, sikc[pos].nim);
+                cout << "masukan nama: ";
+                getline(cin, sikc[pos].nama);
+                cout << "masukan alamat: ";
+                getline(cin, sikc[pos].alamat);
+                cout << "masukan ipk: ";
+                cin >> sikc[pos].ipk;
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 break;
             case '2':
                 
