@@ -47,7 +47,19 @@ int main()
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 break;
             case '2':
-                
+                system("cls");
+                if (pos == -1) {
+                    cout << "Tidak ada data untuk ditampilkan." << endl;
+                } else {
+                    for (int i = 0; i <= pos; i++) {
+                        cout << "Data ke-" << (i + 1) << ": ";
+                        cout << sikc[i].nim << " , " << sikc[i].nama << " , " 
+                            << sikc[i].alamat << " , " << sikc[i].ipk << endl;
+                    }
+                }
+                getch();
+            break;
+
                 break;
             case '3':
                 
